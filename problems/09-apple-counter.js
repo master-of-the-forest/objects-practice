@@ -9,6 +9,22 @@ searching.
 
 
 Example:
+
+***********************************************************************/
+
+function appleCounter(appleObj) {
+  // Your code here
+  let keys = Object.keys(appleObj);
+
+  let apples = keys.filter(function (value) {
+    let lowercase = value.toLowerCase();
+    return lowercase.includes('apple');
+  })
+  return apples.length;
+}
+
+
+
 let obj = { banana: "yay!" };
 appleCounter(obj); // => 0
 
@@ -26,11 +42,6 @@ let obj3 = {
   bigapple: "NYC"
 };
 appleCounter(obj3); // => 3
-***********************************************************************/
-
-function appleCounter(appleObj) {
-  // Your code here
-}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = appleCounter;

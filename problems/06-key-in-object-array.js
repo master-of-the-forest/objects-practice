@@ -21,6 +21,16 @@ keyInObjectArray(objArray, 'animal'); // => false
 
 function keyInObjectArray(objArray, keyString) {
   // Your code here
+  let ans = objArray.filter(function (element) {
+    if (keyString in element) {
+      return element;
+    }
+  })
+
+  if (ans.length > 0) {
+    return true;
+  }
+  return false;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/

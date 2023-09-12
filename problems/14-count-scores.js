@@ -29,7 +29,27 @@ console.log(countScores(peeps)); //=> { Anthony: 4, Fred: 4, Winnie: 6 }
 
 function countScores(people) {
   // Your code here
+  let obj = {};
+
+  people.forEach(function (miniobj) {
+    let {name, score} = miniobj;
+    if (obj[name] === undefined) {
+      obj[name] = score;
+    } else {
+      obj[name] += score;
+    }
+  })
+  return obj;
 }
+
+
+// accept array of objects
+// declare new object
+// iterate the array
+// access the name key of the current object being examined
+// if the name key isn't in the new object array, create a new key in the new object and make the associated points the value
+// if the name key is in the new object, add the new points to what's already there
+// return the new object
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = countScores;

@@ -13,7 +13,23 @@ console.log(arrayConverter(["apple", "banana", "potato", "banana"])); // => {app
 
 function arrayConverter(array) {
   // Your code here
+  let obj = {};
+
+  array.forEach(function (value) {
+    if (obj[value] === undefined) {
+      obj[value] = 1;
+    } else {
+      obj[value] += 1;
+    }
+  })
+  return obj;
 }
+
+// accept array
+// create object
+// loop array, counting repeat elements
+// add element to object as key & add count # as value
+// return object
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = arrayConverter;
